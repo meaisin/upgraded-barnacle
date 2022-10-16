@@ -1,4 +1,5 @@
 (defn plusMinus
+  "arr: a collection of numbers."
   [arr]
   (let [{p :p
          n :n

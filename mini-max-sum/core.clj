@@ -7,3 +7,13 @@
      max-el (apply max arr)]
     (print (str (- total max-el) " "))
     (println (- total min-el))))
+
+(def arr
+  (vec 
+    (map 
+      #(Integer/parseInt %) 
+      (clojure.string/split 
+        (clojure.string/trimr (read-line)) 
+        #" "))))
+
+(miniMaxSum arr)
