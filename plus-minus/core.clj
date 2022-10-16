@@ -3,10 +3,11 @@
   [arr]
   (let [{p :p
          n :n
-         z :z} ((fn [arr] (reduce #(update %1 (cond (> %2 0) :p (< %2 0) :n (= %2 0) :z) inc) {:p 0 :n 0 :z 0} arr)) arr)] 
-    (println (format "%.6f" (float (/ p (+ p n z)))))
-    (println (format "%.6f" (float (/ n (+ p n z)))))
-    (println (format "%.6f" (float (/ z (+ p n z))))))
+         z :z} ((fn [arr] (reduce #(update %1 (cond (> %2 0) :p (< %2 0) :n (= %2 0) :z) inc) {:p 0 :n 0 :z 0} arr)) arr)
+        total (+ p n z)] 
+    (println (format "%.6f" (float (/ p total))))
+    (println (format "%.6f" (float (/ n total))))
+    (println (format "%.6f" (float (/ z total)))))
   )
 
 (def n (Integer/parseInt (clojure.string/trim (read-line))))

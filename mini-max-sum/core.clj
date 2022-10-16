@@ -17,3 +17,4 @@
         #" "))))
 
 (miniMaxSum arr)
+(miniMaxSum2 arr)
